@@ -22,7 +22,7 @@
 
 - nombre: Temas
   items:
-   - name: Inicio
+   - name: Presentación
      url: http://iesgn.github.io/cloud
    - name: Tema 1
      url: http://iesgn.github.io/cloud/curso/u1
