@@ -1,57 +1,45 @@
 ---
 layout: blog
-tittle: Herraminetas DevOps. Git, Vagrant y Ansible
+tittle: Introducción a OpenStack. Uso básico de horizon.
 menu:
-  - Unidad 2
+  - Unidad 4
 ---
-
-La utilización de tecnologías de cloud computing conlleva en bastantes ocasiones
-el uso de nuevas herramientas como las que veremos en esta unidad, pero en
-muchos casos no se trata simplemente de la adopción de nuevas herramientas sino
-que habría que pensar en la adopción paulatina de la denominada metodología
-devops
-
-Esta unidad se puede considerar como un apéndice, un tema que por una parte nos puede ayudar a montar algunos de los entornos de prueba, pero que por otra parte nos introduce en algunas de las herramientas utilizadas habitualmente en nuevas tecnologías como el cloud computing. 
 
 ###Objetivos
 
-* Conocer los principios y característivas de la metodología DevOps.
-* Conocer los distintos tipos de herramientas que nos permiten llevar a cabo la metodología DevOps.
-* Introducción al uso de un software de control de versiones: git.
-* Introducción al uso de un software para la creación de entornos de desarrollos ligeros y portables: vagrant.
-* Introducción al uso de un sofware de automatización de la configuración del sistema: ansible.
+* Introducir los conceptos fundamentales para utilizar OpenStack.
+* Utilizar el cloud computing del IES Gonzalo Nazareno.
 
-###Contenidos
+### Contenidos
 
-**DevOps** es un acrónimo inglés de development (desarrollo) y operations
-  (operaciones o sistemas), que se refiere a una metodología de trabajo que se
-  centra en la comunicación, colaboración e integración entre desarrolladores de
-  software y los profesionales de operaciones en las tecnologías de la
-  información (IT).
+####OpenStack en el IES Gonzalo Nazareno
 
-Los principios fundamentales de esta nueva metodología son:
+En el año 2011 el IES Gonzalo Nazareno, junto a otros tres institutos desarrollan el proyecto de innovación aplicada y transferencia del conocimiento en la formación profesional del sistema educativo, con el título: **Implantación y puesta a punto de la infraestructura de un cloud computing privado para el despliegue de servicios en la nube**.
+El objetivo general de este proyecto es la inclusión de las tecnologías de cloud computing (IaaS) en el currículo de los ciclos formativos de la Familia Profesional de Informática y Comunicaciones. 
 
-* Maneja tu infraestructura como tu software
-* Utiliza software de control de versiones para las configuraciones y especificaciones
-* Todo debe ser legible
-* Automatizar la configuración de nuestro sistema.
+Sitio web con todos los resultados del proyecto:
+[Cloud Computing con OpenStack en educación](http://www.gonzalonazareno.org/cloud/)
 
-Herramientas que se pueden usar:
+El software que elegido para la gestión del cloud fue OpenStack. La primera
+versión del software que se instaló fue OpenStack Essex (2012.1) sobre Debian
+Wheezy utilizando los paquetes oficiales. Posteriormente realizamos una
+actualización a OpenStack Grizzly (2013.1) utilizando los paquetes no oficiales
+de [GPLHost](http://www.gplhost.com/software-openstack.html).
 
-* Creación de entornos de desarrollos ligeros y portables: [Vagrant](vagrant)
-* Software de control de versiones: [Git](git), Subversion, Bazaar, ...
-* Automatización de la configuración de sistemas: [Ansible](ansible), Pupplet, Chef, ...
-* Integración continua: Jenkins, ...
+#### Horizon
 
-Algunas de las opciones de instalación de los entornos de pruebas de OpenStack, que vamos a estudiar en la siguiente unidad, requieren la utilización de estas herramientas. La instalación se va a realizar sobre máquinas virtuales que posteriormente se configuran de forma automática.
+La forma más sencilla de trabajar con OpenStack es a través de la aplicación web
+Horizon:
 
-A lo largo del curso y siempre que sea posible intentaremos poner otros ejemplos
-de uso de estas herramientas y haremos énfasis en sus ventajas y aplicabilidad.
+* [Presentación: Introducción a OpenStack Horizon (Grizzly)](presentacion)
+
+###Prácticas
+
+* [Práctica: Trabajar con instancias GNU/Linux](practica_linux)
+* [Práctica: Trabajar con instancias Windows](practica_windows)
 
 ###Enlaces interesantes
 
-* [Que demonios es eso de Devops (y porqué debería estar interesado). Jacobo García](http://www.slideshare.net/therobot/que-demonios-es-eso-de-devops-y-porquedebera-interesarme)
-
-### Vídeos
-
-* [What is DevOps - In Simple English (RackSpace)](http://www.youtube.com/watch?v=_I94-tJlovg)
+* [Seminario impartido en eMadrid net](http://www.emadridnet.org/seminario-emadrid-aprender-software-libre-experiencias-todos-niveles/cloud-privado-iaas-fines-educativos-software-libre)
+* [Jornadas sobre Cloud Computing](http://www.josedomingo.org/web/course/view.php?id=70)
+* [Seminario online impartido en OpenWebinars.net](http://openwebinars.net/openwebinar-por-que-openstack-software-libre-para-la-nube/)

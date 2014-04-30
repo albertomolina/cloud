@@ -1,77 +1,36 @@
-- nombre: Unidad 1
+- nombre: Tema 1
   items:
    - name: Cloud Computing
      url: http://iesgn.github.io/cloud/curso/u1
    - name: OpenStack
      url: http://iesgn.github.io/cloud/curso/u1/openstack
-   - name: OpenShift
-     url: http://iesgn.github.io/cloud/curso/u1/openshift  
-- nombre: Unidad 2
+- nombre: Tema 2
   items:
-   - name: DevOps
+   - name: OpenStack Havana
      url: http://iesgn.github.io/cloud/curso/u2
-   - name: Git
-     url: http://iesgn.github.io/cloud/curso/u2/git
-   - name: Vagrant
-     url: http://iesgn.github.io/cloud/curso/u2/vagrant
-   - name: Ansible
-     url: http://iesgn.github.io/cloud/curso/u2/ansible
-- nombre: Unidad 3
-  items:
-   - name: Entornos
-     url: http://iesgn.github.io/cloud/curso/u3
-   - name: DevStack
-     url: http://iesgn.github.io/cloud/curso/u3/devstack
-   - name: RDO
-     url: http://iesgn.github.io/cloud/curso/u3/rdo
-   - name: OpenStack-ansible
-     url: http://iesgn.github.io/cloud/curso/u3/openstack-ansible
- 
-- nombre: Unidad 4
-  items:
-   - name: OpenStack Grizzly
-     url: http://iesgn.github.io/cloud/curso/u4
-   - name: Práctica Linux
+   - name: Ejercicios
      url: http://iesgn.github.io/cloud/curso/u4/practica_linux
    - name: Práctica Windows
      url: http://iesgn.github.io/cloud/curso/u4/practica_windows
 
-- nombre: Unidad 5
+- nombre: Tema 3
   items:
-- nombre: Unidad 6
+- nombre: Tema 4
   items:
-- nombre: Unidad 7
-  items:
-- nombre: Unidad 8
-  items:
-- nombre: Unidad 9
-  items:
-- nombre: Unidad 10
+- nombre: Tema 5
   items:
 
-- nombre: Unidades
+- nombre: Temas
   items:
    - name: Inicio
      url: http://iesgn.github.io/cloud
-   - name: Unidad 1
+   - name: Tema 1
      url: http://iesgn.github.io/cloud/curso/u1
-   - name: Unidad 2
+   - name: Tema 2
      url: http://iesgn.github.io/cloud/curso/u2
-   - name: Unidad 3
+   - name: Tema 3
      url: http://iesgn.github.io/cloud/curso/u3
-   - name: Unidad 4
+   - name: Tema 4
      url: http://iesgn.github.io/cloud/curso/u4
-   - name: Unidad 5
+   - name: Tema 5
      url: http://iesgn.github.io/cloud/curso/u5
-   - name: Unidad 6
-     url: http://iesgn.github.io/cloud/curso/u6
-   - name: Unidad 7
-     url: http://iesgn.github.io/cloud/curso/u7
-   - name: Unidad 8
-     url: http://iesgn.github.io/cloud/curso/u8
-   - name: Unidad 9
-     url: http://iesgn.github.io/cloud/curso/u9
-   - name: Unidad 10
-     url: http://iesgn.github.io/cloud/curso/u10
-   - name: Foro
-     url: https://github.com/iesgn/cloud/issues
