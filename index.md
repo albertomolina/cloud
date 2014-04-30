@@ -13,33 +13,33 @@ de 3 horas cada una, conforme a los siguientes contenidos:
 
 1. Introducción
 
-  * Cloud Computing
-  * Infraestructura como servicio: OpenStack
-  * Componentes principales de OpenStack: Keystone, Glance, Nova, Neutron, Cinder,
-  Swift y Horizon 
-  * Conceptos básicos sobre arquitectura de OpenStack
+	* Cloud Computing
+	* Infraestructura como servicio: OpenStack
+	* Componentes principales de OpenStack: Keystone, Glance, Nova, Neutron, Cinder,
+	Swift y Horizon 
+	* Conceptos básicos sobre arquitectura de OpenStack
 
 2. Utilización de OpenStack desde Horizon
 
-  * Subir imágenes
-  * Configuración básica de redes
-  * Lanzamiento de instancias
-  * Acceso a instancias
-  * Ciclo de vida de una instancia
-  * Manejo de volúmenes
+	* Subir imágenes
+	* Configuración básica de redes
+	* Lanzamiento de instancias
+	* Acceso a instancias
+	* Ciclo de vida de una instancia
+	* Manejo de volúmenes
 
 3. Utilización de OpenStack desde línea de comandos
 
-  * Configuración básica de redes
-  * Lanzamiento de instancias
-  * Acceso a instancias
-  * Manejo de volúmenes
+	* Configuración básica de redes
+	* Lanzamiento de instancias
+	* Acceso a instancias
+	* Manejo de volúmenes
 
 4. OpenStack por dentro.
 
-  * Proceso de lanzamiento de una instancia sobre KVM
-  * Creación y asociación de volúmenes con iSCSI
-  * Gestión de redes con OpenvSwitch
+	* Proceso de lanzamiento de una instancia sobre KVM
+	* Creación y asociación de volúmenes con iSCSI
+	* Gestión de redes con OpenvSwitch
 
 5. Resumen de tecnologías utilizadas por OpenStack
 
