@@ -9,10 +9,7 @@
    - name: OpenStack Havana
      url: http://iesgn.github.io/cloud/curso/u2
    - name: Ejercicios
-     url: http://iesgn.github.io/cloud/curso/u4/practica_linux
-   - name: Práctica Windows
-     url: http://iesgn.github.io/cloud/curso/u4/practica_windows
-
+     url: http://iesgn.github.io/cloud/curso/u2/ejercicios
 - nombre: Tema 3
   items:
 - nombre: Tema 4
