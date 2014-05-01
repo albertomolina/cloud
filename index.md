@@ -2,7 +2,7 @@
 layout: blog
 tittle: Introducción a OpenStack
 menu:
-  - Unidades
+  - Temas
 ---
 ### Descripción del curso
 

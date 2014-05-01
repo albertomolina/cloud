@@ -1,50 +1,50 @@
 - nombre: Tema 1
   items:
   - name: Cloud Computing
-    url: http://albertomolina.github.io/cloud/curso/u1
+    url: .
   - name: OpenStack
-    url: http://albertomolina.github.io/cloud/curso/u1/openstack
+    url: openstack
   - name: Arquitectura
-    url: http://albertomolina.github.io/cloud/curso/u1/arquitectura
+    url: arquitectura
 - nombre: Tema 2
   items:
   - name: OpenStack Horizon
-    url: http://albertomolina.github.io/cloud/curso/u2
+    url: .
   - name: Ejercicios
-    url: http://albertomolina.github.io/cloud/curso/u2/ejercicios
+    url: ejercicios
 - nombre: Tema 3
   items:
   - name: OpenStack CLI
-    url: http://albertomolina.github.io/cloud/curso/u3
+    url: .
   - name: Ejercicios
-    url: http://albertomolina.github.io/cloud/curso/u3/ejercicios
+    url: ejercicios
 - nombre: Tema 4
   items:
   - name: OpenStack por dentro
-    url: http://albertomolina.github.io/cloud/curso/u4
+    url: .
   - name: Instancias
-    url: http://albertomolina.github.io/cloud/curso/u4/instancias
+    url: instancias
   - name: Volúmenes
-    url: http://albertomolina.github.io/cloud/curso/u4/volumenes
+    url: volumenes
   - name: Redes
-    url: http://albertomolina.github.io/cloud/curso/u4/redes
+    url: redes
   
 - nombre: Tema 5
   items:
-  - name: OpenStack por dentro
-    url: http://albertomolina.github.io/cloud/curso/u5
+  - name: Por dentro
+    url: .
 
 - nombre: Temas
   items:
   - name: Presentación
-    url: http://albertomolina.github.io/cloud
+    url: .
   - name: Tema 1
-    url: http://albertomolina.github.io/cloud/curso/u1
+    url: curso/u1
   - name: Tema 2
-    url: http://albertomolina.github.io/cloud/curso/u2
+    url: curso/u2
   - name: Tema 3
-    url: http://albertomolina.github.io/cloud/curso/u3
+    url: curso/u3
   - name: Tema 4
-    url: http://albertomolina.github.io/cloud/curso/u4
+    url: curso/u4
   - name: Tema 5
-    url: http://albertomolina.github.io/cloud/curso/u5
+    url: curso/u5
