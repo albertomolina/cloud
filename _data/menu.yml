@@ -4,8 +4,8 @@
     url: .
   - name: OpenStack
     url: openstack
-  - name: Arquitectura
-    url: arquitectura
+  - name: Infraestructura
+    url: infraestructura
 - nombre: Tema 2
   items:
   - name: OpenStack Horizon
