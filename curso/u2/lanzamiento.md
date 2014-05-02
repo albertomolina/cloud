@@ -87,4 +87,4 @@ otra.
 Por último, utilizando un cliente ssh accede a la instancia utilizando la IP
 flotante que le hemos asignado a la instancia, por ejemplo:
 
-        ssh -i cirros.pem centos@192.168.0.15
+        ssh -i prueba.pem centos@192.168.0.15

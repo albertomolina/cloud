@@ -4,161 +4,42 @@ title: Subir una imagen a OpenStack
 menu:
   - Tema 2
 ---
-# Lanzar una instancia desde OpenStack Horizon
+# Subir una imagen
 
-## Escenario
+Como es lógico, solo es posible instanciar las imágenes que estén disponibles en
+nuestra instalación de OpenStack. En una instalación limpia no se dispone de
+ninguna imagen, por lo que uno de los primeros pasos a dar es agregar un
+conjunto mínimo de imágenes con los sistemas operativos que vayamos a utilizar.
 
-Aunque el siguiente procedimiento es bastante general, puede haber pequeñas
-diferencias en función de la versión de OpenStack utilizada, por lo que
-detallamos las características del montaje utilizado:
+## Imagen de CentOS 6.5
 
-* OpenStack Havana (2013.2) sobre CentOS 6.5 utilizando RDO
-* OpenStack neutron con plugin OpenvSwitch en una configuración "Per tenant
-  routers with private networks"
-* Red privada 10.0.0.0/24
-* Direcciones IP flotantes 192.168.0.15-192.168.0.25
-* Nombre de usuario: demo
-* Proyecto: demo
+En el propio repositorio de RDO existe una imagen mínima de CentOS 6.5 en
+formato QCOW2 que podemos descargar para utilizar directamente en OpenStack:
 
-### Crear un par de claves ssh
+* [Centos
+  6.5](http://repos.fedorapeople.org/repos/openstack/guest-images/centos-6.5-20140117.0.x86_64.qcow21)
 
-Por razones de seguridad, las imágenes que se incluyen en OpenStack no suelen
-tener definidas las contraseñas de los usuarios, sólo es posible acceder
-utilizando pares de claves ssh. Cuando se genera una instancia, la clave pública
-ssh se inyecta en la misma y sólo el propietario de la correspondiente clave
-privada podrá acceder a ella.
+## Agregar la imagen a nuestro cloud
 
-Tras iniciar una sesión en Horizon, el primer paso es crear un par de claves
-ssh, por lo que hacemos picamos en la pestaña "Pares de claves" (Acceso y
-Seguridad).
+En el menú "Imágenes e instantáneas" pulsamos sobre el botón "Crear imagen" y
+rellenamos apropiadamente los siguientes campos:
 
-Hay dos opciones: Crear un par de claves o importarlo. Optamos por la primera
-opción, por lo que ponemos un nombre al par de claves (prueba) y se nos
-descargará automáticamente la clave privada correspondiente, la enviamos al
-directorio ~/.ssh y la protegemos adecuadamente:
+* Nombre
+* Descripción (opcional)
+* Origen de la imagen. En este caso podemos optar por poner la URL directamente,
+  para lo que deberíamos elegir la opción "Ubicación de la imagen" o subir el
+  fichero desde nuestro equipo, opción "Fichero de Imagen"
+* De acuerdo a la opción anterior rellenamos el campo "Ubicación de la imagen" o
+  seleccionamos la imagen desde nuestro equipo.
+* Seleccionamos el formato.
+* Disco mínimo. Para que no se permita iniciar la instancia con un disco raíz
+  inferior al de la imagen
+* Público. Seleccionamos esta opción si queremos permitir que otros usuarios la
+  utilicen
+* Protegida. Para evitar que se borre.
 
-       mv prueba.pem ~/.ssh
-       chmod 400 ~/.ssh/prueba.pem
+### Referencias
 
-### Asignar IP flotante al proyecto
+* [RDO - Image resources](http://openstack.redhat.com/Image_resources)
+* [OpenStack Doc - Get Images](http://docs.openstack.org/image-guide/content/ch_obtaining_images.html)
 
-Las direcciones IP flotantes (IPs elásticas en terminología de Amazon) permiten
-a las instancias comunicarse con equipos de fuera de su red.
-
-* Hacemos "click" en la pestaña "IPs flotantes" (Acceso y Seguridad)
-* Pulsamos en "Asignar IP al proyecto"
-* Pulsamos en "Asignar IP" de la ventana emergente
-
-### Lanzar una instancia
-
-Vamos a "Imágenes e instantáneas" y seleccionamos una imagen 
-Click on “Images & Snapshots” and launch a required instance from the list of
-images available (in this case we’ll use Debian wheezy image).
-
-images
-
-Provide an instance name and select a flavor in “Details” tab:
-
-instance1
-
-Click on “Access & security” tab and select the right keypair:
-
-instance2
-
-Click on “Networking” tab and select desired network from available
-networks. Volume options and post-Creation can be ignored in this simple test,
-so click on launch bottom:
-
-instance3
-
-After a few seconds the instance is active and a fixed IP 10.0.0.2 has been
-assigned to it. Clicking on “More” button shows several options, click on
-“Associate Floating IP”:
-instace-running1
-
-Floting IP 172.22.196.59 is now associated to port with IP 10.0.0.2:
-
-floatingip4
-
-It is possible to see instance virtual console, but it is not possible to log in
-because user password is not set.
-
-spice
-Security Group rules
-
-Instance is launched and floating IP associated so it should be possible to
-access via ssh, but this is not yet possible due to default firewall
-behavior. Incoming connections must be explicitly allowed as rules in a security
-group.
-
-Click on Security groups tab in “Access & security” and click on “Edit Rules”
-button:
-
-secgroup1
-
-Add a rule to allow incoming ssh connections (22/tcp):
-
-secgroup2
-
-Add a rule to allow all incoming icmp connections:
-
-secgroup3
-
-Two rules are now defined:
-
-secgroup4
-Access to the launched instance
-
-Now we can ping to the instance:
-
-$ ping 172.22.196.59
-PING 172.22.196.59 (172.22.196.59) 56(84) bytes of data.
-64 bytes from 172.22.196.59: icmp_req=1 ttl=62 time=621 ms
-64 bytes from 172.22.196.59: icmp_req=2 ttl=62 time=136 ms
-64 bytes from 172.22.196.59: icmp_req=3 ttl=62 time=143 ms
-^C
---- 172.22.196.59 ping statistics ---
-3 packets transmitted, 3 received, 0% packet loss, time 2001ms
-rtt min/avg/max/mdev = 136.858/300.532/621.666/227.090 ms
-
-And use the ssh command to make a secure connection to the instance (specifying
-the private key to use):
-
-$ ssh -i ~/.ssh/openstack-bisharron.pem debian@172.22.196.59
-The authenticity of host '172.22.196.59 (172.22.196.59)' can't be established.
-ECDSA key fingerprint is 2f:23:72:6f:13:b8:f0:00:9a:fb:90:64:da:3f:58:9d.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added '172.22.196.59' (ECDSA) to the list of known hosts.
-Linux debian.example.com 3.2.0-4-amd64 #1 SMP Debian 3.2.46-1 x86_64
-
-The programs included with the Debian GNU/Linux system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
-debian@debian-test:~$
-
-Clicking on “Network topology” we can see a nice representation of the project
-elements (routers, networks and servers):
-
-###Objetivos
-
-* Conocer los conceptos fundamentales para poder utilizar OpenStack.
-* Utilizar OpenStack desde el panel web (Horizon)
-
-### Conceptos Previos
-
-* [Conceptos previos](conceptos_previos.html)
-
-### Lanzar una instancia desde OpenStack Horizon
-
-* [Lanzar una instancia](lanzar_instancia)
-
-###Ejercicios
-
-* [Ejercicio: Trabajar con instancias GNU/Linux](practica_linux)
-
-### Enlaces interesantes
-
-* [How to launch an instance on OpenStack(I): Horizon](http://albertomolina.wordpress.com/2013/11/20/how-to-launch-an-instance-on-openstack-i-horizon/)
