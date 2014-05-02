@@ -6,16 +6,30 @@ menu:
 ---
 # Uso de OpenStack Horizon
 
-###Objetivos
+##Objetivos
 
 * Conocer los conceptos fundamentales para poder utilizar OpenStack.
 * Utilizar OpenStack desde el panel web (Horizon)
 
-### Conceptos Previos
+## Conceptos Previos
 
 * [Conceptos previos](conceptos_previos.html)
 
-### Uso básico de OpenStack Horizon
+## Escenario
+
+Aunque el siguiente procedimiento es bastante general, puede haber pequeñas
+diferencias en función de la versión de OpenStack utilizada, por lo que
+detallamos las características del montaje utilizado:
+
+* OpenStack Havana (2013.2) sobre CentOS 6.5 utilizando RDO
+* OpenStack neutron con plugin OpenvSwitch en una configuración "Per tenant
+  routers with private networks"
+* Red privada 10.0.0.0/24
+* Direcciones IP flotantes 192.168.0.15-192.168.0.25
+* Nombre de usuario: demo
+* Proyecto: demo
+
+## Uso básico de OpenStack Horizon
 
 * [Subir una imagen](subir_imagen)
 * [Lanzar una instancia](lanzamiento)
