@@ -2,7 +2,7 @@
 layout: blog
 tittle: Introducción a OpenStack. Uso básico de horizon.
 menu:
-  - Unidad 4
+  - Tema 2
 ---
 ## Práctica: Trabajar con Instancias GNU/Linux
 

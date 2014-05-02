@@ -1,0 +1,80 @@
+---
+layout: presentacion
+title: Conceptos Previos
+tema: solarized
+---
+<section>
+  <h1>Conceptos Previos</h1>
+  <p>
+    <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	Coballes</a> / <a
+			  href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+											    href="http://josedomingo.org">José Domingo Muñoz
+	Rodríguez</a> / <a
+			   href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+  </p>
+  <p><small>
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
+								    width="100px" border="0"/></a></small></p>
+  <p><small>
+      Theme
+      by <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
+    </small>
+  </p>
+</section>
+<section>
+  <h2>Conceptos previos (I)</h2>
+  <ul>
+    <li><strong>Token de autenticación</strong>: OpenStack
+      utiliza <a href="http://stackoverflow.com/questions/1592534/what-is-token-based-authentication">Autenticación
+	basada en tokens</a>. Un token es una cadena aleatoria que se
+      obtiene tras autenticarse en un sistema (con nombre de usuario y
+      contraseña, p. ej.) y que permite al usuario utilizar recursos
+      de forma segura sin volver a autenticarse.</li>
+    <li><strong>Imagen</strong>: Imagen de sistema operativo preconfigurado que se
+      utiliza como base para crear instancias. Dentro del cloud habrá
+      diferentes imágenes para cada tipo de instacia que se quiera
+      utilizar.</li>
+    <li><strong>Instancia</strong>: Instancia de una imagen que se crea a demanda del usuario en uno de los nodos del cloud.</li>
+  </ul>
+</section>
+<section>
+  <h2>Conceptos previos (II)</h2>
+  <ul>
+    <li><strong>IP fija</strong>: Direccion IP con la que se crean una
+      instancia en una red y que se utiliza para comunicacion
+      interna. La dirección IP 
+      fija no cambia durante la vida de la instancia.</li>
+    <li><strong>IP flotante</strong>: Direccion IP asociada a una
+      instancia en un 
+      momento dado para poder acceder a ella desde fuera. Una IP
+      flotante puede asignarse a otra instancia diferente cuando se
+      estime oportuno.</li>
+    <li><strong>Grupo de seguridad</strong>: Reglas de cortafuegos que
+      controlan el 
+      acceso a las instancias.</li>
+    <li><strong>Par de claves ssh</strong>: Par de claves RSA pública/privada
+      utilizadas para acceder por ssh a las instancias desde fuera del 
+      cloud.</li>
+    <li><strong>Endpoint</strong>: URL completa para la utilización de
+      una determinada API. Pueden definirse URLs diferentes para las API
+      pública, interna y de administración.</li>
+  </ul>
+</section>
+	  <section>
+	    <h2>Ejemplo de uso</h2>
+	    <p>Creación y acceso a una instancia</p>
+	    <ul>
+	      <li>El usuario se autentica en Keystone y obtiene un token de
+	      sesión y la lista de los endpoints de los servicios</li>
+	      <li>Solicita a glance las imágenes disponibles</li>
+	      <li>Solicita a neutron las redes disponibles</li>
+	      <li>Solicita a nova que arranque una instancia de una de las
+	      imágenes disponibles, en una de las redes y que inyecte
+	      posteriormente su clave ssh pública.</li>
+	      <li>Solicita una IP flotante a neutron y la asocia a la IP fija de
+	      la instancia creada</li>
+	      <li>Accede por ssh a la instancia utilizando la clave privada
+	      correspondiente</li>
+	    </ul>
+	  </section>
