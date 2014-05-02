@@ -10,10 +10,10 @@
   items:
   - name: OpenStack Horizon
     url: .
-  - name: Utilización
-    url: utilizacion
-  - name: Ejercicios
-    url: ejercicios
+  - name: Subir imagen
+    url: subir_imagen
+  - name: Crear instancia
+    url: lanzamiento
 - nombre: Tema 3
   items:
   - name: OpenStack CLI

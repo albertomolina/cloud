@@ -15,14 +15,11 @@ menu:
 
 * [Conceptos previos](conceptos_previos.html)
 
-### Lanzar una instancia desde OpenStack Horizon
+### Uso básico de OpenStack Horizon
 
-* [Lanzar una instancia](lanzar_instancia)
+* [Subir una imagen](subir_imagen)
+* [Lanzar una instancia](lanzamiento)
 
-###Ejercicios
-
-* [Ejercicio: Trabajar con instancias GNU/Linux](practica_linux)
-
-### Enlaces interesantes
+### Enlaces relacionados
 
 * [How to launch an instance on OpenStack(I): Horizon](http://albertomolina.wordpress.com/2013/11/20/how-to-launch-an-instance-on-openstack-i-horizon/)
