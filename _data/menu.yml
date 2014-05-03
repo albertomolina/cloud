@@ -10,11 +10,11 @@
   items:
   - name: OpenStack Horizon
     url: .
-  - name: Subir imagen
+  - name: Imágenes
     url: subir_imagen
   - name: Redes
     url: redes
-  - name: Crear instancia
+  - name: Instancias
     url: lanzamiento
   - name: Volúmenes
     url: volumenes

@@ -36,4 +36,5 @@ detallamos las características del montaje utilizado:
 
 ### Enlaces relacionados
 
+* [OpenStack End User Guide](http://docs.openstack.org/user-guide/content/index.html)
 * [How to launch an instance on OpenStack(I): Horizon](http://albertomolina.wordpress.com/2013/11/20/how-to-launch-an-instance-on-openstack-i-horizon/)

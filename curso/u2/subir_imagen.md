@@ -40,6 +40,7 @@ rellenamos apropiadamente los siguientes campos:
 
 ### Referencias
 
+* [OpenStack -  Upload and manage images](http://docs.openstack.org/user-guide/content/dashboard_manage_images.html)
 * [RDO - Image resources](http://openstack.redhat.com/Image_resources)
 * [OpenStack Doc - Get Images](http://docs.openstack.org/image-guide/content/ch_obtaining_images.html)
 
