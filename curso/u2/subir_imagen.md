@@ -16,8 +16,8 @@ conjunto mínimo de imágenes con los sistemas operativos que vayamos a utilizar
 En el propio repositorio de RDO existe una imagen mínima de CentOS 6.5 en
 formato QCOW2 que podemos descargar para utilizar directamente en OpenStack:
 
-* [Centos
-  6.5](http://repos.fedorapeople.org/repos/openstack/guest-images/centos-6.5-20140117.0.x86_64.qcow21)
+* [RDO - Guest
+  images](http://repos.fedorapeople.org/repos/openstack/guest-images/)
 
 ## Agregar la imagen a nuestro cloud
 

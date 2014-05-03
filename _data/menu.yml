@@ -12,8 +12,12 @@
     url: .
   - name: Subir imagen
     url: subir_imagen
+  - name: Redes
+    url: redes
   - name: Crear instancia
     url: lanzamiento
+  - name: Volúmenes
+    url: volumenes
 - nombre: Tema 3
   items:
   - name: OpenStack CLI
