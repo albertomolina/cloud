@@ -51,9 +51,11 @@ de 3 horas cada una, conforme a los siguientes contenidos:
 ### Ponente
 
 [Alberto Molina Coballes](http://albertomolina.wordpress.com), profesor de
-Formación Profesional de Informática en el IES Gonzalo Nazareno, tiene amplia
-experiencia docente y en cloud computing, dedica parte de su trabajo a la
-administración de un cloud privado con OpenStack desde el año 2012 y ha
+Formación Profesional de Informática en el IES Gonzalo Nazareno, coordinó en el
+curso 2011/12 un novedoso proyecto para la incorporación de las tecnologías al
+ámbito educativo ([Cloud Computing con OpenStack en
+educación](http://www.gonzalonazareno.org/cloud/)), dedica parte de su tiempo a
+la administración de un cloud privado con OpenStack desde el año 2012 y ha
 participado hasta la fecha en varios seminarios y  jornadas sobre el tema.
 
 ###Calendario previsto
