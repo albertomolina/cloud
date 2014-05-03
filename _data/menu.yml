@@ -22,22 +22,26 @@
   items:
   - name: OpenStack CLI
     url: .
-  - name: Ejercicios
-    url: ejercicios
-- nombre: Tema 4
-  items:
-  - name: OpenStack por dentro
-    url: .
+  - name: Redes
+    url: redes
   - name: Instancias
     url: instancias
   - name: Volúmenes
     url: volumenes
-  - name: Redes
-    url: redes
+- nombre: Tema 4
+  items:
+  - name: OpenStack por dentro
+    url: .
+  - name: KVM
+    url: kvm
+  - name: iSCSI
+    url: iscsi
+  - name: OpenvSwitch
+    url: openvswitch
   
 - nombre: Tema 5
   items:
-  - name: Por dentro
+  - name: Resumen
     url: .
 
 - nombre: Temas

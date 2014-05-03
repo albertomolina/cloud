@@ -29,11 +29,6 @@ detallamos las características del montaje utilizado:
 * Nombre de usuario: demo
 * Proyecto: demo
 
-## Uso básico de OpenStack Horizon
-
-* [Subir una imagen](subir_imagen)
-* [Lanzar una instancia](lanzamiento)
-
 ### Enlaces relacionados
 
 * [OpenStack End User Guide](http://docs.openstack.org/user-guide/content/index.html)
