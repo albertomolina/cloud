@@ -9,7 +9,7 @@ menu:
 El cloud computing o computacion en la nube es una nuevo paradigma que permite
 ofrecer servicios de computación a través de Internet.
 
-Este curso, organizado por [bn-cloud](http://www.bn-cloud.com/) está orientado a
+Este curso, organizado por [bn-cloud](http://www.bn-cloud.com/), está orientado a
 conocer las principales características del cloud computing, mediante la
 utilización de una nube privada de infraestructura con OpenStack.
 
