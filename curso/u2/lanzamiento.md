@@ -88,3 +88,14 @@ Por último, utilizando un cliente ssh accede a la instancia utilizando la IP
 flotante que le hemos asignado a la instancia, por ejemplo:
 
         ssh -i prueba.pem centos@192.168.0.15
+
+## Ciclo de vida de una instancia
+
+O por qué no es lo mismo trabajar con una instancia de IaaS que con un servidor
+virtual dedicado.
+
+* Pausar
+* Reanudar
+* Crear Instantáneas
+* Redimensionar
+* Terminar
