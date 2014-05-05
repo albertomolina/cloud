@@ -13,6 +13,9 @@ Este curso, organizado por [bn-cloud](http://www.bn-cloud.com/), está orientado
 conocer las principales características del cloud computing, mediante la
 utilización de una nube privada de infraestructura con OpenStack.
 
+<div align="center"><a href="http://http://www.bn-cloud.com/"><img
+src="img/logo-bncloud.jpg" alt="logo BN Cloud"/></a></div>
+
 La actividad formativa contendrá cinco temas que se impartirán en tres sesiones
 de 3 horas cada una, conforme a los siguientes contenidos:
 
