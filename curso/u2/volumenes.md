@@ -1,23 +1,23 @@
 ---
 layout: blog
-title: Manejo de volúmenes
+title: OpenStack Horizon
 menu:
   - Tema 2
 ---
-# Manejo de volúmenes
+## Volúmenes
 
 Los volúmenes son dispositivos de bloques que se pueden asociar o desasociar de
 las instancias y son independientes de la vida de éstas, por lo que se pueden
 utilizar para almacenamiento "permanente", es decir, para almacenar datos
 después de terminar la instancia.
 
-## Crear volúmenes
+### Crear volúmenes
 
 Simplemente pulsando en el botón "Crear volúmen" dentro de "Volúmenes". Veremos
 una ventana en la que podremos crear un nuevo volumen definiendo un nombre y un
 tamaño (en GiB).
 
-## Asociar volumen
+### Asociar volumen
 
 Una vez creado el volumen, podremos asociarlo a cualquiera de las instancias
 activas del proyecto.
@@ -37,13 +37,13 @@ el sistema:
 
 Podemos particionarlo, formatearlo y montarlo si queremos.
 
-## Desasociar volumen
+### Desasociar volumen
 
 Cuando no sea necesario tener conectado el volumen a la instancia, podemos
 desasociarlo (previamente habría que desmontarlo de la instancia) y utilizarlo
 en la misma instancia o en cualquier otra cuando sea preciso.
 
-## Limitaciones
+### Limitaciones
 
 No es posible asociar el mismo volumen a más de una instancia simultáneamente
 para prevenir corrupción del sistema de ficheros del volumen, a pesar de que el 

@@ -1,17 +1,17 @@
 ---
 layout: blog
-title: Configuración básica de redes
+title: OpenStack Horizon
 menu:
   - Tema 2
 ---
-# Configuración básica de redes
+## Configuración básica de redes
 
 De acuerdo a la configuración utilizada ([Per tenant routers with private
 networks](http://docs.openstack.org/grizzly/openstack-network/admin/content/app_demo_routers_with_private_networks.html)),
 cada usuario podrá crear las redes y routers que desee y conectarlos a la red
 externa común.
 
-## Definiciones previas:
+### Definiciones previas:
 
 * **Red** Dominio aislado de capa 2. Sería el equivalente a una VLAN.
 * **Subred** Un bloque de direcciones IPv4 o IPv6 que se asignan a las máquinas
@@ -21,7 +21,7 @@ externa común.
 Partimos de una topología de red en la que existe una red externa previamente
 creada por el administrador.
 
-## Crear una red privada
+### Crear una red privada
 
 Para crear una nueva red privada vamos al menú "Redes" y pulsamos sobre el botón
 "Crear red", nos aparecerá una ventana en la que debemos rellenar los siguientes
@@ -51,7 +51,7 @@ proyecto. Ya sería posible iniciar instancias y asociarlas a esta red, pero de
 momento esas instancias no serían accesibles desde fuera porque están en una red
 privada aislada.
 
-## Crear un router
+### Crear un router
 
 Para crear un nuevo router vamos al menú "Routers" y pulsamos el botón "Crear
 router", en la ventana que aparece simplemente tenemos que ponerle un nombre
@@ -65,7 +65,7 @@ puerta de enlace", procedemos a pulsar el mismo y seleccionar la red externa que
 previamente ha creado el administrador de la red. Tras definir la puerta de
 enlace se asignará una dirección IP flotante al router, aunque no aparecerá 
 
-## Conectar la red privada con la red externa 
+### Conectar la red privada con la red externa 
 
 Ahora mismo tenemos un router con una interfaz de red conectada a la red externa
 y una red privada, obviamente si queremos conectar la red privada con la red
@@ -83,7 +83,7 @@ como instancias haya conectadas a la red y un puerto de tipo "network:dhcp" para
 el dispositivo DHCP, que no se crea hasta que se lanza la primera instancia
 dentro de la red.
 
-## Comprobación
+### Comprobación
 
 Accedemos a "Topología de red" y comprobamos que todos los elementos están
 correctamente definidos.

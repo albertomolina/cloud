@@ -1,10 +1,9 @@
 ---
 layout: blog
-tittle: Introducción al Cloud Computing.
+tittle: Introducción al Cloud Computing
 menu:
   - Tema 1
 ---
-## Introducción al Cloud Computing
 
 ###Objetivos
 * Conocer las principales características del Cloud Computing.
@@ -20,7 +19,7 @@ proporcionar IaaS tanto en clouds públicos como privados.
 
 * [Presentación: Introducción al Cloud Computing](presentacion)
 
-###Enlaces interesantes
+###Enlaces relacionados
 
 IaaS:
 

@@ -1,17 +1,17 @@
 ---
 layout: blog
-title: Subir una imagen a OpenStack
+title: OpenStack Horizon
 menu:
   - Tema 2
 ---
-# Subir una imagen
+## Imágenes
 
 Como es lógico, solo es posible instanciar las imágenes que estén disponibles en
 nuestra instalación de OpenStack. En una instalación limpia no se dispone de
 ninguna imagen, por lo que uno de los primeros pasos a dar es agregar un
 conjunto mínimo de imágenes con los sistemas operativos que vayamos a utilizar.
 
-## Imagen de CentOS 6.5
+### Imagen de CentOS 6.5
 
 En el propio repositorio de RDO existe una imagen mínima de CentOS 6.5 en
 formato QCOW2 que podemos descargar para utilizar directamente en OpenStack:
@@ -19,7 +19,7 @@ formato QCOW2 que podemos descargar para utilizar directamente en OpenStack:
 * [RDO - Guest
   images](http://repos.fedorapeople.org/repos/openstack/guest-images/)
 
-## Agregar la imagen a nuestro cloud
+### Agregar una imagen
 
 En el menú "Imágenes e instantáneas" pulsamos sobre el botón "Crear imagen" y
 rellenamos apropiadamente los siguientes campos:

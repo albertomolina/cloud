@@ -1,9 +1,10 @@
 ---
 layout: blog
-tittle: Infraestructura para OpenStack
+tittle: Introducción al Cloud Computing
 menu:
   - Tema 1
 ---
+## Infraestructura
 
 A la hora de realizar una implantación de OpenStack es necesario conocer los
 elementos que lo componen, la forma en la que interactúan unos con otros o los

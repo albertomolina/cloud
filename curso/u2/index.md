@@ -1,21 +1,21 @@
 ---
 layout: blog
-title: Uso básico de horizon.
+title: OpenStack Horizon.
 menu:
   - Tema 2
 ---
-# Uso de OpenStack Horizon
+## Uso de OpenStack Horizon
 
-##Objetivos
+### Objetivos
 
 * Conocer los conceptos fundamentales para poder utilizar OpenStack.
 * Utilizar OpenStack desde el panel web (Horizon)
 
-## Conceptos Previos
+### Conceptos Previos
 
 * [Conceptos previos](conceptos_previos.html)
 
-## Escenario
+### Escenario
 
 Aunque el siguiente procedimiento es bastante general, puede haber pequeñas
 diferencias en función de la versión de OpenStack utilizada, por lo que
