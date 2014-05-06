@@ -46,6 +46,6 @@ en la misma instancia o en cualquier otra cuando sea preciso.
 ## Limitaciones
 
 No es posible asociar el mismo volumen a más de una instancia simultáneamente
-para prevenir corrupción del sistema de ficheros del volumen. A pesar de que el 
+para prevenir corrupción del sistema de ficheros del volumen, a pesar de que el 
 protocolo de redes de almacenamiento subyacente lo permite y la utilización de
 un sistema de ficheros de tipo cluster evitaría la corrupción de datos.
