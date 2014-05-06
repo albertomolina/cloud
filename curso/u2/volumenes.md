@@ -24,6 +24,7 @@ activas del proyecto.
 
 Si accedemos a la instancia podemos comprobar que existe un nuevo dispositivo en
 el sistema:
+
 	# fdisk -l 
 	Disk /dev/vdb: 1073 MB, 1073741824 bytes
 	16 heads, 63 sectors/track, 2080 cylinders, total 2097152 sectors
