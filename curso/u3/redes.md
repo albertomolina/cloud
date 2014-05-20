@@ -50,6 +50,10 @@ direcciones IP que se asignarán a las instancias que se creen en la red.
 	+------------------+--------------------------------------------+
 
 
+### Grupos de seguridad
+
+Inicialmente está definido el grupo de seguridad "dafault" con las siguientes reglas:
+
 	$ neutron security-group-rule-list
 	+--------------------------------------+----------------+-----------+----------+------------------+--------------+
 	| id                                   | security_group | direction | protocol | remote_ip_prefix | remote_group |
@@ -59,8 +63,11 @@ direcciones IP que se asignarán a las instancias que se creen en la red.
 	| a008aa84-5543-4a24-8398-751b3aa3d1a8 | default        | egress    |          |                  |              |
 	| ffa55db3-00ae-4e8f-8e03-92f76d998ba7 | default        | egress    |          |                  |              |
 	+--------------------------------------+----------------+-----------+----------+------------------+--------------+
-	
-Añadimos una nueva regla para que puedan comunicarse por ICMP las máquinas de la red 10.0.0.0/24:
+
+Es importante destacar que a diferencia de versiones anteriores de OpenStack, en
+Havana hay que diferenciar entre reglas para procesos de entrada (ingress) y de
+salida (egress). Añadimos una nueva regla para que puedan comunicarse por ICMP
+las máquinas de la red 10.0.0.0/24:
 
 	$ neutron security-group-rule-create --direction ingress --protocol icmp --remote-ip-prefix 10.0.0.0/24 default
 	
