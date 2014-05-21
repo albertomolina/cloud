@@ -68,23 +68,95 @@ True      |
 Listamos las imágenes disponibles:
 
     $ nova image-list
-	+--------------------------------------+---------------------------------+--------+--------+
-	| ID                                   | Name                            |
-	Status | Server |
-	+--------------------------------------+---------------------------------+--------+--------+
-	Completar !!!
-	
++--------------------------------------+--------------+--------+--------+
+| ID                                   | Name         | Status | Server |
++--------------------------------------+--------------+--------+--------+
+| f43a75f1-da13-4223-ac1f-cb0dac55399c | CentOS 6.5   | ACTIVE |        |
+| 4ddb27ab-b3cc-4a65-ac52-f4ce7894e4ed | Cirros 0.3.2 | ACTIVE |        |
++--------------------------------------+--------------+--------+--------+
+
+Listamos las redes disponibles:
+
+    $ nova net-list
++--------------------------------------+----------+------+
+| ID                                   | Label    | CIDR |
++--------------------------------------+----------+------+
+| 0d43e5fe-99b9-46a8-b118-58136aa805b4 | privada  | -    |
+| 7481948f-3f80-4585-a91c-a85a9aba49b7 | ext_net  | -    |
++--------------------------------------+----------+------+
+
+
 ## Lanzar una instancia
 
 Una vez que conocemos todos los parámetros necesarios, lanzamos una instancia
 con la instrucción:
 
-        $ nova boot --image 4ddb27ab-b3cc-4a65-ac52-f4ce7894e4ed \
-		--flavor 1 \
-		--key_name miclave \
-		--nic net-id=f84a328e-407e-4ca6-87bb-ec148853c585 \
-		test
-										
+    $ nova boot --image 4ddb27ab-b3cc-4a65-ac52-f4ce7894e4ed \
+--flavor 1 \
+--key_name miclave \
+--nic net-id=0d43e5fe-99b9-46a8-b118-58136aa805b4 \
+test
+
+
+## Asociar una IP flotante
+
+Una vez que la instancia se ha creado en la red privada, solicitamos una
+dirección IP flotante y se la asociamos a la instancia:
+
+    $ nova floating-ip-create ext_net
++--------------+-----------+----------+---------+
+| Ip           | Server Id | Fixed Ip | Pool    |
++--------------+-----------+----------+---------+
+| 192.168.0.16 |           | -        | ext_net |
++--------------+-----------+----------+---------+
+$ nova floating-ip-associate test 192.168.0.16
+
+## Acceder a la instancia
+
+Para poder acceder por ssh a la instancia es necesario que esté permitido el
+acceso al puerto 22/tcp, por lo que añadimos una regla al grupo de seguridad
+*default*:
+
+    $ nova secgroup-add-rule default tcp 22 22 0.0.0.0/0
++-------------+-----------+---------+-----------+--------------+
+| IP Protocol | From Port | To Port | IP Range  | Source Group |
+-------------+-----------+---------+-----------+--------------+
+| tcp         | 22        | 22      | 0.0.0.0/0 |              |
++-------------+-----------+---------+-----------+--------------+
+
+Si esta misma regla de seguridad la definiésemos con neutron sería:
+
+    $ neutron security-group-rule-create --direction ingress \
+--protocol tcp --port-range-min 22 --port-range-max 22 \
+--remote-ip-prefix 192.168.0.0/24 default
+Created a new security_group_rule:
++-------------------+--------------------------------------+
+| Field             | Value                                |
++-------------------+--------------------------------------+
+| direction         | ingress                              |
+| ethertype         | IPv4                                 |
+| id                | 185580b9-45d8-4e29-9019-22400873efd1 |
+| port_range_max    | 22                                   |
+| port_range_min    | 22                                   |
+| protocol          | tcp                                  |
+| remote_group_id   |                                      |
+| remote_ip_prefix  | 192.168.0.0/24                       |
+| security_group_id | d1a8eb3a-3335-48ec-90d6-e6608e75aaef |
+| tenant_id         | 0912c80bef254d7b9352632793cf75b9     |
++-------------------+--------------------------------------+
+
+Una vez permitido el tráfico ssh, podemos acceder utilizando la clave privada
+RSA asociada a la clave pública que se ha inyectado en la cuenta del usuario
+cirros de la instancia:
+
+    $ ssh cirros@192.168.0.16
+	The authenticity of host '192.168.0.16 (192.168.0.16)' can't be established.
+	RSA key fingerprint is db:2d:84:f7:56:49:69:3f:50:f1:96:c1:75:1c:cd:b9.
+	Are you sure you want to continue connecting (yes/no)? yes
+	Warning: Permanently added '192.168.0.16' (RSA) to the list of known hosts.
+	$ 
+	
+
 
 ### Referencias
 
