@@ -90,7 +90,8 @@ Además de utilizar los volúmenes para almacenar datos de aplicaciones o de usu
 	| 4ddb27ab-b3cc-4a65-ac52-f4ce7894e4ed | Cirros 0.3.2 | ACTIVE |        |
 	+--------------------------------------+--------------+--------+--------+
 	
-	$ cinder create --image-id 4ddb27ab-b3cc-4a65-ac52-f4ce7894e4ed --display-name "CirrOS 0.3.2" 1
+	$ cinder create --image-id 4ddb27ab-b3cc-4a65-ac52-f4ce7894e4ed \
+	--display-name "CirrOS 0.3.2" 1
 	+---------------------+--------------------------------------+
 	|       Property      |                Value                 |
 	+---------------------+--------------------------------------+
@@ -112,7 +113,9 @@ Además de utilizar los volúmenes para almacenar datos de aplicaciones o de usu
 
 Si miramos las propiedades de este último volumen, podemos comprobar que se ha etiquetado como *bootable*, por lo que podemos iniciar una nueva instancia que lo utilice como unidad de almacenamiento primaria con el sistema:
 
-    $ nova boot --flavor 1 --key-name clave-openstack --nic net-id=0d43e5fe-99b9-46a8-b118-58136aa805b4 --block-device-mapping vda=2869f3c1-5566-46ca-9ab2-8bec5d39497e::: test4
+    $ nova boot --flavor 1 --key-name clave-openstack \
+	--nic net-id=0d43e5fe-99b9-46a8-b118-58136aa805b4 \
+	--block-device-mapping vda=2869f3c1-5566-46ca-9ab2-8bec5d39497e::: test4
 	+--------------------------------------+--------------------------------------------------+
 	| Property                             | Value                                            |
 	+--------------------------------------+--------------------------------------------------+
@@ -197,7 +200,8 @@ Es posible hacer instantáneas también a los volúmenes:
 	| 70ba58bf-1201-4b27-8de3-a1f2f1bf49ed | available |     None     |  1   |     None    |  false   |             |
 	+--------------------------------------+-----------+--------------+------+-------------+----------+-------------+
 	
-	$ cinder snapshot-create --display-name snap-`date +%s` 70ba58bf-1201-4b27-8de3-a1f2f1bf49ed
+	$ cinder snapshot-create --display-name snap-`date +%s` \
+	70ba58bf-1201-4b27-8de3-a1f2f1bf49ed
 	+---------------------+--------------------------------------+
 	|       Property      |                Value                 |
 	+---------------------+--------------------------------------+
