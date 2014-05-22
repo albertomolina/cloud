@@ -1,9 +1,10 @@
 ---
 layout: blog
-tittle: OpenStack. Redes.
+tittle: OpenStack por dentro
 menu:
-  - Unidad 8
+  - Unidad 4
 ---
+
 En las unidades anteriores se han visto dos elementos fundamentales para
 configurar la infraestructura como servicio, esto es máquinas virtuales y
 almacenamiento, pero falta un último elemento: la <a
