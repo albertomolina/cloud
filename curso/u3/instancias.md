@@ -160,26 +160,32 @@ Fuente: <a href="http://www.slideshare.net/gmccance/cern-data-centre-evolution">
 
 Es por tanto es bastantes ocasiones necesario realizar alguna de las siguientes acciones sobre las instancias:
 
-* Pausar una instancia activa: 
-
-    nova pause <server>
-
-* Despausar una instancia pausada: 
-
-    nova unpause <server>
-
-* Suspender una instancia activa: <pre>nova suspend</pre>
-* Reanudar una instancia suspendida: <pre>nova resume</pre>
-* Parar una instancia activa: <pre>nova stop</pre>
-* Arrancar una instancia parada: <pre>nova start</pre>
-* Reiniciar una instancia activa: <pre>nova [--hard] reboot</pre>
-* Terminar una instancia (irreversible): <pre>nova delete</pre>
+<ul>
+<li>Pausar una instancia activa: 
+<pre><code>nova pause &lt;server&gt;</code></pre></li>
+<li>Despausar una instancia pausada:
+<pre><code>nova unpause &lt;server&gt;</code></pre></li>
+<li>Suspender una instancia activa:
+<pre><code>nova suspend &lt;server&gt;</code></pre></li>
+<li>Reanudar una instancia suspendida: 
+<pre><code>nova resume &lt;server&gt;</code></pre></li>
+<li>Parar una instancia activa: 
+<pre><code>nova stop &lt;server&gt;</code></pre></li>
+<li>Arrancar una instancia parada: 
+<pre><code>nova start &lt;server&gt;</code></pre></li>
+<li>Reiniciar una instancia activa: 
+<pre><code>nova reboot [--hard] &lt;server&gt;</code></pre></li>
+<li>Terminar una instancia (irreversible): 
+<pre><code>nova delete &lt;server&gt;</code></pre></li>
+</ul>
 
 ### Redimensionar la instancia
 
 Para poder utilizar esta funcionalidad es necesario realizar algunas configuraciones en los nodos de computación que normalmente no se realizan en instalaciones automáticas como la utilizada en este curso. Básicamente hay que garantizar que los usuarios "nova" de los nodos de computación pueden acceder de un nodo a otro con ssh sin contraseña utilizando pares de claves pública/privada sin frase de paso.
 
-Una vez configurado el escenario se puede redimensionar la instancia con la instrucción <pre>nova resize</pre>
+Una vez configurado el escenario se puede redimensionar la instancia con la instrucción:
+
+    nova resize <server>
 
 ### Instantáneas de instancias
 
