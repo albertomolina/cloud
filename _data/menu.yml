@@ -30,14 +30,14 @@
     url: volumenes
 - nombre: Tema 4
   items:
-  - name: OpenStack por dentro
+  - name: Por dentro
     url: .
+  - name: OpenvSwitch
+    url: openvswitch
   - name: KVM
     url: kvm
   - name: iSCSI
     url: iscsi
-  - name: OpenvSwitch
-    url: openvswitch
   
 - nombre: Tema 5
   items:
