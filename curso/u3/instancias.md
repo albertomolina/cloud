@@ -160,8 +160,14 @@ Fuente: <a href="http://www.slideshare.net/gmccance/cern-data-centre-evolution">
 
 Es por tanto es bastantes ocasiones necesario realizar alguna de las siguientes acciones sobre las instancias:
 
-* Pausar una instancia activa: <pre>nova pause</pre>
-* Despausar una instancia pausada: <pre>nova unpause</pre>
+* Pausar una instancia activa: 
+
+    nova pause <server>
+
+* Despausar una instancia pausada: 
+
+    nova unpause <server>
+
 * Suspender una instancia activa: <pre>nova suspend</pre>
 * Reanudar una instancia suspendida: <pre>nova resume</pre>
 * Parar una instancia activa: <pre>nova stop</pre>
