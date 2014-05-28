@@ -20,9 +20,9 @@ anteriores:
 * <a href="https://wiki.openstack.org/wiki/Ceilometer">Ceilometer</a>: Metering
 * <a href="https://wiki.openstack.org/wiki/Trove">Trove</a>: DBaaS
 * <a href="https://wiki.openstack.org/wiki/Ironic">Ironic</a>: Bare Metal
-* <a https://wiki.openstack.org/wiki/Designate">Designate</a>: DNSaaS
-* <a https://wiki.openstack.org/wiki/Sahara">Sahara</a>: Hadoop cluster
-* <a https://wiki.openstack.org/wiki/TripleO">TripleO</a>: OpenStack on OpenStack
+* <a href="https://wiki.openstack.org/wiki/Designate">Designate</a>: DNSaaS
+* <a href="https://wiki.openstack.org/wiki/Sahara">Sahara</a>: Hadoop cluster
+* <a href="https://wiki.openstack.org/wiki/TripleO">TripleO</a>: OpenStack on OpenStack
 
 Esto en lo referente a aplicaciones oficiales, pero además se está creando un
 ecosistema de aplicaciones que funcionan sobre OpenStack pero no forman parte
