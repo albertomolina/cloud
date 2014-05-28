@@ -66,8 +66,8 @@ participado hasta la fecha en varios seminarios y  jornadas sobre el tema.
 |Fecha|Contenido|
 |:---:|---------|
 |6/05/2014|**Sesión 1**<br/>Temas 1 y 2|
-|20/05/2014|**Sesión 2**<br/>Temas 3 y 4|
-|27/05/2014|**Sesión 3**<br/>Temas 4 (cont.) y 5|
+|23/05/2014|**Sesión 2**<br/>Temas 3 y 4|
+|29/05/2014|**Sesión 3**<br/>Temas 4 (cont.) y 5|
 
 ###Enlaces relacionados
 
@@ -75,6 +75,7 @@ participado hasta la fecha en varios seminarios y  jornadas sobre el tema.
     net](http://www.emadridnet.org/seminario-emadrid-aprender-software-libre-experiencias-todos-niveles/cloud-privado-iaas-fines-educativos-software-libre)
 * [Jornadas sobre Cloud Computing](http://www.josedomingo.org/web/course/view.php?id=70)
 * [Seminario online impartido en OpenWebinars.net](http://openwebinars.net/openwebinar-por-que-openstack-software-libre-para-la-nube/)
+* [Curso: Fundamentos de Cloud Computing con OpenStack y OpenShift](http://iesgn.github.io/cloud/)
 
 ###Licencia
 
