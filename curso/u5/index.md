@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: 
+tittle: Resumen
 menu:
   - Tema 5
 ---
@@ -19,7 +19,7 @@ anteriores:
 * <a href="https://wiki.openstack.org/wiki/Heat">Heat</a>: Orchestration
 * <a href="https://wiki.openstack.org/wiki/Ceilometer">Ceilometer</a>: Metering
 * <a href="https://wiki.openstack.org/wiki/Trove">Trove</a>: DBaaS
-* <a href="https://wiki.openstack.org/wiki/Ironic">Ironic: Bare Metal
+* <a href="https://wiki.openstack.org/wiki/Ironic">Ironic</a>: Bare Metal
 * <a https://wiki.openstack.org/wiki/Designate">Designate</a>: DNSaaS
 * <a https://wiki.openstack.org/wiki/Sahara">Sahara</a>: Hadoop cluster
 * <a https://wiki.openstack.org/wiki/TripleO">TripleO</a>: OpenStack on OpenStack
