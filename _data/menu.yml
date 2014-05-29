@@ -32,12 +32,12 @@
   items:
   - name: Por dentro
     url: .
-  - name: OpenvSwitch
-    url: openvswitch
   - name: KVM
     url: kvm
-  - name: iSCSI
-    url: iscsi
+  - name: LVM + iSCSI
+    url: lvm-iscsi
+  - name: OpenvSwitch
+    url: openvswitch
   
 - nombre: Tema 5
   items:
