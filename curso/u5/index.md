@@ -11,10 +11,13 @@ como OpenStack y a modo de resumen mostrar otras muchas opciones a considerar.
 
 ## Otros componentes de OpenStack
 
-En este curso nos hemos centrado en los componentes del *core* de OpenStack:
-Keystone, Glance, Neutron, Cinder, Nova Swift y Horizon, aunque OpenStack va
-incorporando paulatinamente más componentes que van complementando a los 
-anteriores:
+En este curso nos hemos centrado en el uso básico de los componentes del *core*
+de OpenStack: Keystone, Glance, Neutron, Cinder, Nova, Swift y Horizon. Hay
+bastantes aspectos que no se han tratado como son LBaaS (balanceadores de carga
+como servicio) o FWaaS (cortafuegos como servicio) de neutron, migración en vivo
+de instancias, keystone con LDAP y otras muchas opciones específicas de
+configuración. Además es importante destacar que OpenStack va incorporando
+paulatinamente más componentes que van complementando a los anteriores:
 
 * <a href="https://wiki.openstack.org/wiki/Heat">Heat</a>: Orchestration
 * <a href="https://wiki.openstack.org/wiki/Ceilometer">Ceilometer</a>: Metering
@@ -29,8 +32,8 @@ ecosistema de aplicaciones que funcionan sobre OpenStack pero no forman parte
 del proyecto oficial como <a
 href="https://wiki.openstack.org/wiki/MagnetoDB">MagnetoDB</a>, <a
 href="https://launchpad.net/kwapi">Kwapi</a> o <a
-href="https://launchpad.net/stacksync">StackSync</a> entre otros o los muchos
-proyectos que se ubican en <a
+href="https://launchpad.net/stacksync">StackSync</a> por citar algunos muy
+diversos o los muchos proyectos que se ubican en <a
 href="https://github.com/stackforge">StackForge</a>.
 
 ## Opciones de instalación de OpenStack
@@ -44,7 +47,7 @@ aspectos adicionales a considerar en un despliegue real:
   o alternativamente utilizar como nodos de computación equipos con VMware o
   Hyper-V sobre Windows.
 * Distribuciones GNU/Linux: Las que ofrecen mejor soporte actualmente son Ubuntu
-  12.04 y CentOS/Red HAt 6.X. El soporte en Debian es mediante "backports" y
+  12.04 y CentOS/Red Hat 6.X. El soporte en Debian es mediante "backports" y
   está un poco reñido con la estabilidad de esta distribución.
 * Opciones de almacenamiento:
     * Almacenamiento de Objetos: Utilizar o no Swift
