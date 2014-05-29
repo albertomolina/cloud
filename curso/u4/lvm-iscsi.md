@@ -20,7 +20,7 @@ de bus SCSI a través de una red TCP/IP. Es un protocolo de la capa de transport
 que básicamente permite la utilización de un dispositivo de bloques en un equipo
 remoto.
 
-## Creación de un volumen
+### Creación de un volumen
 
 Utilizamos el cliente cinder para crear un nuevo volumen:
 
@@ -142,8 +142,50 @@ Es decir, el que realiza la conexión iSCSI es el nodo de computación y el disp
 	  <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x0'/>
 	</disk>
 										   
+### Instantáneas
 
+Si hacemos una instantánea de un volumen:
+
+    $ cinder snapshot-create vol3
+	+---------------------+--------------------------------------+
+	|       Property      |                Value                 |
+	+---------------------+--------------------------------------+
+	|      created_at     |      2014-05-29T10:39:24.806930      |
+	| display_description |                 None                 |
+	|     display_name    |                 None                 |
+	|          id         | 9236ca13-0b71-4050-8ac0-467827719327 |
+	|       metadata      |                  {}                  |
+	|         size        |                  1                   |
+	|        status       |               creating               |
+	|      volume_id      | d61284c3-4daa-48e1-9731-cd6d4361b4c6 |
+	+---------------------+--------------------------------------+
+
+Se utiliza directamente una instantánea de LVM:
+
+    # lvs
+	  LV                                             VG             Attr	   LSize   Pool Origin                                      Data%  Move Log Cpy%Sync Convert
+	  _snapshot-3546a39f-fc32-42ea-9c51-2d6959f9798a cinder-volumes swi-a-s---  1,00g      volume-70ba58bf-1201-4b27-8de3-a1f2f1bf49ed   0,00
+	
+Pero no se ha creado ningún target nuevo ya que las instantáneas de volumen no
+son directamente utilizables como volúmenes sino que es necesario crear un nuevo
+volumen desde ellas para poder asociarlo posteriormente a una instancia.
 
 ### Borrado seguro de volúmenes
 
+Puesto que estamos en un sistema de recursos compartidos el mecanismo que
+utiliza por defecto OpenStack para borrar los volúmenes es seguro porque antes
+de eliminar el volumen lógico procede a llenarlo de ceros para evitar que los
+datos que allí hubieran los pueda leer posteriormente otro usuario.
 
+Para ver este comportamiento bien es preciso tener configurado cinder en modo
+debug y proceder a eliminar un volumen cualquiera:
+
+    $ cinder delete 70ba58bf-1201-4b27-8de3-a1f2f1bf49ed
+	
+Si vemos los registros de cinder-volume podemos extraer los siguientes
+mensajes:
+
+    2014-05-29 12:50:26.023 13973 DEBUG cinder.openstack.common.processutils [req-1f17dc86-1de6-4483-b106-d09cd2ab70be 0f94f0bbcdee4715ba2750502bb0d63f 0912c80bef254d7b9352632793cf75b9] Running cmd (subprocess): sudo cinder-rootwrap /etc/cinder/rootwrap.conf dd count=0 if=/dev/zero of=/dev/mapper/cinder--volumes-volume--70ba58bf--1201--4b27--8de3--a1f2f1bf49ed iflag=direct oflag=direct execute /usr/lib/python2.6/site-packages/cinder/openstack/common/processutils.py:142
+	...
+	2014-05-29 12:50:43.121 13973 INFO cinder.volume.manager [req-1f17dc86-1de6-4483-b106-d09cd2ab70be 0f94f0bbcdee4715ba2750502bb0d63f 0912c80bef254d7b9352632793cf75b9] volume 70ba58bf-1201-4b27-8de3-a1f2f1bf49ed: deleted successfully
+	
